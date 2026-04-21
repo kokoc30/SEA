@@ -1,6 +1,6 @@
 # SEA Stage 2 - Data Catalog Project
 
-## Live Demo
+## Live Demo - https://kokos-project-catalog.netlify.app
 
 My GitHub Pages link is currently not opening correctly because of a custom domain issue.
 
