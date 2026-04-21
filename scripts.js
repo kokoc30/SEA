@@ -1,9 +1,8 @@
 // Koko's Project Catalog
-//
 // Data flow (three layers):
-//   allProjects     — permanent source of truth, never mutated
-//   workingProjects — base catalog after any removals
-//   visibleProjects — final rendered result after search/filter/sort
+//   allProjects     - permanent source of truth, never mutated
+//   workingProjects - base catalog after any removals
+//   visibleProjects - final rendered result after search/filter/sort
 
 const allProjects = [
   {
@@ -231,7 +230,7 @@ let detailCarouselImages = [];
 let detailCarouselIndex = 0;
 let detailCarouselTimer = null;
 
-// ─── Controls setup ───────────────────────────────────────────────────────────
+// ────────Controls setup ───────────────────────────────────────────────────────────
 
 function populateCategoryOptions() {
   const select = document.getElementById("category-select");
@@ -287,7 +286,7 @@ function getFilteredProjects() {
   return results;
 }
 
-// Single render entry point — derives visibleProjects and re-renders.
+// Single render entry point, derives visibleProjects and re-renders.
 function applyCatalogControls() {
   visibleProjects = getFilteredProjects();
   showCards();
