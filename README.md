@@ -2,7 +2,9 @@
 
 ## Live Demo
 
-My GitHub Pages link is currently not opening correctly because of a custom domain issue. http://legacyloom.me/SEA/
+My GitHub Pages link is currently not opening correctly because of a custom domain issue.
+
+GitHub Pages link: http://legacyloom.me/SEA/
 
 You can view my published project here on Netlify:  
 [View My Project on Netlify](https://kokos-project-catalog.netlify.app/)
