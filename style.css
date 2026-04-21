@@ -2,34 +2,84 @@ html,
 body {
   margin: 0;
   padding: 0;
+  /* American-flag-inspired blue/red gradient background */
+  background: linear-gradient(90deg, #041e42 20%, #9b1c2c 100%);
+  background-attachment: fixed;
 }
 
 .main-header {
-  background-color: rgba(0, 0, 0, 0.3);
-  padding-bottom: 10px;
+  background: linear-gradient(90deg, #041e42 20%, #9b1c2c 100%);
+  padding-top: 20px;
+  padding-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-stars span {
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  opacity: 0.9;
+  animation: moveStarsRight 3s infinite alternate ease-in-out;
+}
+
+@keyframes moveStarsRight {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(15px);
+  }
 }
 
 .title {
   text-align: center;
   margin: 0;
-  font-size: 8em;
+  font-size: 6em;
   font-family: "Helvetica";
   font-weight: normal;
-  color: white;
+  color: #F4E3B2;
+  position: relative;
+  z-index: 1;
 }
 
 #card-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 20px;
+}
+
+.card-description {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .card {
   width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 3.5px solid transparent;
+  border-radius: 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 5px;
+  background:
+    linear-gradient(white, white) padding-box,
+    repeating-linear-gradient(-45deg,
+      #9b1c2c, #9b1c2c 15px,
+      #ffffff 15px, #ffffff 30px,
+      #041e42 30px, #041e42 45px,
+      #ffffff 45px, #ffffff 60px) border-box;
 }
 
 .card-content {
@@ -40,12 +90,208 @@ body {
 
 .card-content h2 {
   margin-top: 0;
+  margin-bottom: 8px;
   font-size: 20px;
+  min-height: 56px;
+}
+
+.card-content ul {
+  margin: 4px 0;
+  padding-left: 24px;
 }
 
 .card img {
+  display: block;
   width: 100%;
+  height: 240px;
+  object-fit: contain;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
+}
+
+#controls-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  padding: 5px 20px 5px 20px;
+  font-family: "Verdana";
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+#search-input,
+#category-select {
+  font-family: "Verdana";
+  font-size: 15px;
+  color: #777;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+}
+
+#search-input {
+  min-width: 220px;
+}
+
+.empty-state {
+  font-family: "Verdana";
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+#detail-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+#detail-overlay.visible {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#detail-panel {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 20px;
+  font-family: "Verdana";
+  color: #777;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.detail-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #777;
+}
+
+#detail-panel button {
+  font-size: 14px;
+  height: 32px;
+  padding: 0 12px;
+}
+
+#detail-carousel {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+#detail-image,
+#detail-video {
+  width: 100%;
+  max-height: 48vh;
   height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+#detail-carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 22px;
+  width: 30px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#carousel-prev {
+  left: 6px;
+}
+
+#carousel-next {
+  right: 6px;
+}
+
+#carousel-counter {
+  position: absolute;
+  bottom: 5px;
+  right: 6px;
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+  font-family: "Verdana";
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+#detail-meta,
+#detail-achievement,
+#detail-long-desc,
+#detail-tech {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 6px 0;
+}
+
+#detail-highlights {
+  margin: 8px 0;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#detail-links {
+  margin-top: 16px;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#detail-links a {
+  color: #0077b5;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Verdana";
+}
+
+#detail-links a:hover {
+  text-decoration: underline;
 }
 
 .footer {

@@ -1,31 +1,93 @@
 <!doctype html>
 <html>
-  <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
-  </head>
 
-  <body>
-    <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
-    </header>
-    <div id="card-container"></div>
-    <div class="card" style="display: none">
-      <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
-        <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
-        </ul>
+<head>
+  <title>Koko's Project Catalog | Home</title>
+  <meta name="description" content="A catalog of my hackathons and personal projects" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<body>
+  <header class="main-header" id="hero-section">
+    <div class="hero-stars">
+      <span style="top: 10%; left: 5%;">★</span><span style="top: 25%; left: 12%;">★</span><span
+        style="top: 5%; left: 20%;">★</span><span style="top: 30%; left: 35%;">★</span><span
+        style="top: 15%; left: 45%;">★</span>
+      <span style="top: 40%; left: 8%;">★</span><span style="top: 60%; left: 22%;">★</span><span
+        style="top: 55%; left: 40%;">★</span><span style="top: 70%; left: 15%;">★</span><span
+        style="top: 85%; left: 50%;">★</span>
+      <span style="top: 5%; left: 60%;">★</span><span style="top: 15%; left: 75%;">★</span><span
+        style="top: 10%; left: 90%;">★</span><span style="top: 35%; left: 65%;">★</span><span
+        style="top: 25%; left: 82%;">★</span>
+      <span style="top: 50%; left: 70%;">★</span><span style="top: 65%; left: 88%;">★</span><span
+        style="top: 80%; left: 60%;">★</span><span style="top: 75%; left: 78%;">★</span><span
+        style="top: 90%; left: 95%;">★</span>
+      <span style="top: 12%; left: 30%;">★</span><span style="top: 45%; left: 55%;">★</span><span
+        style="top: 22%; left: 42%;">★</span><span style="top: 68%; left: 33%;">★</span><span
+        style="top: 82%; left: 28%;">★</span>
+      <span style="top: 5%; left: 52%;">★</span><span style="top: 38%; left: 18%;">★</span><span
+        style="top: 62%; left: 4%;">★</span><span style="top: 88%; left: 12%;">★</span><span
+        style="top: 18%; left: 2%;">★</span>
+      <span style="top: 55%; left: 92%;">★</span><span style="top: 42%; left: 80%;">★</span><span
+        style="top: 28%; left: 58%;">★</span><span style="top: 72%; left: 48%;">★</span><span
+        style="top: 15%; left: 10%;">★</span>
+      <span style="top: 32%; left: 95%;">★</span><span style="top: 48%; left: 25%;">★</span><span
+        style="top: 58%; left: 68%;">★</span><span style="top: 85%; left: 38%;">★</span><span
+        style="top: 10%; left: 38%;">★</span>
+      <span style="top: 20%; left: 85%;">★</span><span style="top: 65%; left: 52%;">★</span><span
+        style="top: 78%; left: 18%;">★</span><span style="top: 92%; left: 72%;">★</span><span
+        style="top: 50%; left: 42%;">★</span>
+      <span style="top: 35%; left: 3%;">★</span><span style="top: 5%; left: 98%;">★</span><span
+        style="top: 95%; left: 5%;">★</span><span style="top: 45%; left: 90%;">★</span><span
+        style="top: 22%; left: 68%;">★</span>
+    </div>
+    <h1 class="title">Koko's Project Catalog</h1>
+    <div id="controls-bar">
+      <input type="text" id="search-input" placeholder="Search projects..." />
+      <select id="category-select">
+        <option value="All">All Categories</option>
+      </select>
+    </div>
+  </header>
+  <div id="card-container"></div>
+  <div id="detail-overlay">
+    <div id="detail-panel">
+      <div class="detail-header">
+        <h2 id="detail-title">Project Title</h2>
+        <button onclick="closeProjectDetails()">Close</button>
       </div>
+      <div id="detail-carousel">
+        <img id="detail-image" src="" alt="" />
+        <video id="detail-video" controls style="display:none"></video>
+        <button id="carousel-prev" onclick="showPreviousDetailImage()" style="display:none">&#8249;</button>
+        <button id="carousel-next" onclick="showNextDetailImage()" style="display:none">&#8250;</button>
+        <span id="carousel-counter" style="display:none"></span>
+      </div>
+      <p id="detail-meta"></p>
+      <p id="detail-achievement"></p>
+      <p id="detail-long-desc"></p>
+      <p id="detail-tech"></p>
+      <ul id="detail-highlights"></ul>
+      <div id="detail-links"></div>
     </div>
-    <div class="footer">
-      <button onclick="quoteAlert()">Get A Quote!</button>
-      <button onclick="removeLastCard()">Remove A Card!</button>
+  </div>
+  <div class="card" style="display: none">
+    <div class="card-content">
+      <h2>Project Title</h2>
+      <img src="" alt="Project Image" />
+      <p class="card-description">Short description</p>
+      <ul>
+        <li>Bullet Point 1</li>
+        <li>Bullet Point 2</li>
+        <li>Bullet Point 3</li>
+      </ul>
     </div>
-  </body>
+  </div>
+  <div class="footer">
+    <button onclick="reloadCatalog()">Reload Catalog</button>
+    <button onclick="removeLastProject()">Remove Last Project</button>
+  </div>
+</body>
+
 </html>
