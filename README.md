@@ -1,5 +1,12 @@
 # SEA Stage 2 - Data Catalog Project
 
+## Live Demo
+
+My GitHub Pages link is currently not opening correctly because of a custom domain issue.
+
+You can view my published project here on Netlify:  
+[View My Project on Netlify](https://kokos-project-catalog.netlify.app/)
+
 This repository contains the instructions, requirements, and starter code for Stage Two of the Snap Engineering Academy application process.
 
 ---
