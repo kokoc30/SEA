@@ -93,7 +93,7 @@ const allProjects = [
     detailImageMaxHeight: "38vh",
     shortDescription: "A deep-learning model that classifies brain MRI scans by tumor type.",
     bullets: [
-      "AI / ML research project, 2024",
+      "AI / ML research project, 2025",
       "Trained a convolutional neural network on labeled MRI scan data",
       "Explored preprocessing, augmentation, and evaluation for medical imaging",
     ],
@@ -125,7 +125,7 @@ const allProjects = [
     images: ["images/qr-doorbell.png"],
     shortDescription: "A smart doorbell that uses QR codes to identify and greet visitors.",
     bullets: [
-      "IoT project, 2024",
+      "IoT project, 2025",
       "Combines a camera module with QR decoding and notifications",
       "Explores low-cost home automation and contactless entry",
     ],
@@ -149,7 +149,7 @@ const allProjects = [
     images: ["images/automated-2048-game-bot.png"],
     shortDescription: "A bot that plays the 2048 browser game automatically using a simple strategy.",
     bullets: [
-      "Automation project, 2024",
+      "Automation project, 2025",
       "Reads the board state and drives moves through scripted input",
       "Tunes heuristics to push toward higher tile values",
     ],
@@ -173,7 +173,7 @@ const allProjects = [
     images: ["images/modern-calculator-ui.png", "images/modern-calculator-ui-2.png"],
     shortDescription: "A clean calculator interface focused on layout, spacing, and keyboard feel.",
     bullets: [
-      "Web app UI project, 2024",
+      "Web app UI project, 2025",
       "Handles arithmetic, operator chaining, and keyboard input",
       "Emphasizes typography, spacing, and hover/focus states",
     ],
