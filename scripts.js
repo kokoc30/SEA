@@ -12,16 +12,16 @@ const allProjects = [
     images: ["images/asl-lens.jpg", "images/asl-lens-2.jpg", "images/asl-lens-3.jpeg", "images/asl-lens-4.mp4"],
     shortDescription: "A hackathon web app that translates ASL letters into live captions.",
     bullets: [
-      "Hackathon project, 2025 — 1st Place at Jewel City Hacks 3.0",
+      "Hackathon project, 2025 - 1st Place at Jewel City Hacks 3.0",
       "Recognizes ASL letters from a live webcam feed in the browser",
       "Focused on accessibility and real-time communication",
     ],
     categories: ["Hackathon", "Web App"],
     year: 2025,
-    achievement: "1st Place — Jewel City Hacks 3.0 (2025)",
+    achievement: "1st Place - Jewel City Hacks 3.0 (2025)",
     technologies: ["JavaScript", "TensorFlow.js", "Webcam API", "Speech-to-Text"],
     longDescription:
-      "ASL Lens is a browser-based accessibility tool built during Jewel City Hacks 3.0, where it earned first place. The app uses a live webcam feed to recognize individual ASL letters in real time and renders captions directly on screen. The goal was to lower the communication barrier for ASL users in digital contexts — no extra hardware, no install required. The full recognition pipeline runs in the browser using TensorFlow.js for model inference.",
+      "ASL Lens is a browser-based accessibility tool built during Jewel City Hacks 3.0, where it earned first place. The app uses a live webcam feed to recognize individual ASL letters in real time and renders captions directly on screen. The goal was to lower the communication barrier for ASL users in digital contexts - no extra hardware, no install required. The full recognition pipeline runs in the browser using TensorFlow.js for model inference.",
     links: [
       {
         label: "LinkedIn: View Post",
@@ -42,7 +42,7 @@ const allProjects = [
     ],
     categories: ["Hackathon", "Web App"],
     year: 2025,
-    achievement: "Top 5 – Jewel City Hacks 2.0",
+    achievement: "Top 5 - Jewel City Hacks 2.0",
     technologies: ["JavaScript", "Web Speech API", "HTML", "CSS"],
     longDescription:
       "TalkBridge is an assistive communication tool that captures live speech and renders real-time captions in the browser. It was built with senior users and people with hearing loss in mind, prioritizing large readable text, minimal interface clutter, and reliable transcription. The app relies entirely on the browser's built-in Web Speech API so no server or external API key is needed — everything runs client-side and works offline.",
@@ -98,11 +98,11 @@ const allProjects = [
       "Explored preprocessing, augmentation, and evaluation for medical imaging",
     ],
     categories: ["AI / ML"],
-    year: 2024,
+    year: 2025,
     achievement: null,
     technologies: ["Python", "TensorFlow", "Keras", "NumPy", "Matplotlib"],
     longDescription:
-      "This project trained a convolutional neural network to classify brain MRI scans into four categories: glioma, meningioma, pituitary tumor, and no tumor. The work covered the full machine learning pipeline — dataset exploration, image preprocessing, data augmentation, model architecture selection, training, validation, and evaluation using accuracy metrics and confusion matrices. The project demonstrated hands-on experience with medical imaging datasets and practical deep learning in Python.",
+      "This project trained a convolutional neural network to classify brain MRI scans into four categories: glioma, meningioma, pituitary tumor, and no tumor. The work covered the full machine learning pipeline - dataset exploration, image preprocessing, data augmentation, model architecture selection, training, validation, and evaluation using accuracy metrics and confusion matrices. The project demonstrated hands-on experience with medical imaging datasets and practical deep learning in Python.",
     links: [
       {
         label: "LinkedIn: View Post",
@@ -130,11 +130,11 @@ const allProjects = [
       "Explores low-cost home automation and contactless entry",
     ],
     categories: ["IoT"],
-    year: 2024,
+    year: 2025,
     achievement: null,
     technologies: ["Python", "Raspberry Pi", "OpenCV", "pyzbar", "SMS API"],
     longDescription:
-      "QR-Doorbell replaces a traditional doorbell button with a QR code scan. A visitor scans the code at the door, the camera module captures the image, and the system sends a notification to the resident — with optional visitor identification if the QR code is personalized. The project runs on a Raspberry Pi using a camera module, OpenCV for image capture, and pyzbar for QR decoding. It explores practical low-cost smart-home automation without relying on proprietary platforms.",
+      "QR-Doorbell replaces a traditional doorbell button with a QR code scan. A visitor scans the code at the door, the camera module captures the image, and the system sends a notification to the resident - with optional visitor identification if the QR code is personalized. The project runs on a Raspberry Pi using a camera module, OpenCV for image capture, and pyzbar for QR decoding. It explores practical low-cost smart-home automation without relying on proprietary platforms.",
     links: [
       {
         label: "GitHub: View Repo",
@@ -154,11 +154,11 @@ const allProjects = [
       "Tunes heuristics to push toward higher tile values",
     ],
     categories: ["Automation"],
-    year: 2024,
+    year: 2025,
     achievement: null,
     technologies: ["JavaScript", "DOM Scripting", "Heuristic Algorithms"],
     longDescription:
-      "This bot automates the 2048 browser game by reading the current grid state from the DOM and applying a scripted move strategy to push toward higher tile values. The strategy uses heuristics such as corner weighting and empty-cell maximization to guide decisions. The project was a focused exercise in DOM automation, game-state representation, and algorithmic thinking — no backend, no framework, just the browser and plain JavaScript.",
+      "This bot automates the 2048 browser game by reading the current grid state from the DOM and applying a scripted move strategy to push toward higher tile values. The strategy uses heuristics such as corner weighting and empty-cell maximization to guide decisions. The project was a focused exercise in DOM automation, game-state representation, and algorithmic thinking - no backend, no framework, just the browser and plain JavaScript.",
     links: [
       {
         label: "GitHub: View Repo",
@@ -178,7 +178,7 @@ const allProjects = [
       "Emphasizes typography, spacing, and hover/focus states",
     ],
     categories: ["Web App"],
-    year: 2024,
+    year: 2025,
     achievement: null,
     technologies: ["HTML", "CSS", "JavaScript"],
     longDescription:
@@ -206,7 +206,7 @@ const allProjects = [
     achievement: null,
     technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
     longDescription:
-      "This website was built for a senior living community to present its services, amenities, floor plans, and contact information in a clear and accessible format. The design emphasized large readable text, straightforward navigation, and a calm welcoming visual tone appropriate for the intended audience. The project involved translating a client brief into a fully responsive, accessible static site — balancing professional presentation with genuine usability for older visitors.",
+      "This website was built for a senior living community to present its services, amenities, floor plans, and contact information in a clear and accessible format. The design emphasized large readable text, straightforward navigation, and a calm welcoming visual tone appropriate for the intended audience. The project involved translating a client brief into a fully responsive, accessible static site - balancing professional presentation with genuine usability for older visitors.",
     links: [
       {
         label: "GitHub: View Repo",
@@ -229,6 +229,7 @@ const catalogState = {
 let detailCarouselImages = [];
 let detailCarouselIndex = 0;
 let detailCarouselTimer = null;
+let detailCarouselLoops = 0;
 
 // ────────Controls setup ───────────────────────────────────────────────────────────
 
@@ -345,6 +346,7 @@ function openProjectDetails(projectId) {
   stopDetailCarousel();
   detailCarouselImages = project.images;
   detailCarouselIndex = 0;
+  detailCarouselLoops = 0;
   document.getElementById("detail-image").style.maxHeight = project.detailImageMaxHeight || "";
   renderProjectDetails(project);
   document.getElementById("detail-overlay").classList.add("visible");
@@ -459,7 +461,16 @@ function startDetailCarousel() {
   if (src.toLowerCase().endsWith(".mp4")) return;
 
   detailCarouselTimer = setInterval(() => {
-    detailCarouselIndex = (detailCarouselIndex + 1) % detailCarouselImages.length;
+    const nextIndex = (detailCarouselIndex + 1) % detailCarouselImages.length;
+    if (nextIndex === 0) {
+      detailCarouselLoops += 1;
+      if (detailCarouselLoops >= 2) {
+        stopDetailCarousel();
+        return;
+      }
+    }
+
+    detailCarouselIndex = nextIndex;
     showDetailImage(detailCarouselIndex);
     
     // If the new slide is a video, stop the timer immediately
